@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tap to Change color</title>
+    <style>
+        div{
+            height: 50px;
+            width: 200px;
+            line-height: 50px;
+            color: white;
+            text-align: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            display: grid;
+        }
+
+    </style>
+</head>
+<body>
+    <div onclick="changeColor(this)" style="background-color: red;">
+        Tap me to change color!!!
+    </div>
+    
+    <script>
+        function changeColor(element) {
+            const currenColor = element.style.backgroundColor;
+            if(currenColor == "red") {
+                element.style.backgroundColor = "green";
+            } else if(currenColor == "green") {
+                element.style.backgroundColor = "blue";
+            } else if (currenColor == "blue") {
+                element.style.backgroundColor = "yellow";
+            } else {
+                element.style.backgroundColor = "red";
+            }
+        }
+    </script>
+</body>
+</html>
